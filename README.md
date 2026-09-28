@@ -21,3 +21,10 @@ jekyll serve --source docs
 # step3
 added the docs/index2.md to showcase styling of (https://jekyllrb.com/docs/)  
 jekyll serve --source docs
+
+
+
+# step4
+explore jekyll, make a style as close to the jekyll docs page style as possible  
+make the page allow to add music documentation  
+gem "just-the-docs"  
