@@ -1,0 +1,566 @@
+---
+title: Quickstart
+---
+
+<style>
+:root {
+  --accent: #d34f4a;
+  --accent-dark: #b83e3a;
+  --text: #333;
+  --muted: #777;
+  --border: #ddd;
+  --dark: #272727;
+  --link: #267cb9;
+  --code-bg: #f5f5f5;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: white;
+  color: var(--text);
+  font-family: Lato, "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+}
+
+a {
+  color: var(--link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+header {
+  border-top: 5px solid var(--accent);
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.header {
+  max-width: 1120px;
+  min-height: 92px;
+  margin: 0 auto;
+  padding: 0 22px;
+
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 45px;
+  color: #333;
+  font-size: 32px;
+  font-weight: 300;
+  letter-spacing: -2px;
+}
+
+.logo strong {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.main-nav a {
+  color: #555;
+  font-weight: 700;
+}
+
+.main-nav a.current {
+  color: var(--accent);
+}
+
+.search {
+  margin-left: auto;
+}
+
+.search input {
+  width: 190px;
+  padding: 9px 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: 0;
+}
+
+.search input:focus {
+  border-color: var(--accent);
+}
+
+.meta {
+  display: flex;
+  gap: 13px;
+  margin-left: 20px;
+  font-size: 13px;
+}
+
+.meta a {
+  color: #888;
+}
+
+/* =========================
+   MAIN DOCS GRID
+   ========================= */
+
+.docs {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 50px 22px 90px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 820px) 220px;
+  gap: 65px;
+}
+
+/* =========================
+   ARTICLE
+   ========================= */
+
+article {
+  min-width: 0;
+}
+
+.improve {
+  float: right;
+  margin: 8px 0 10px 30px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+article h1 {
+  margin: 0 0 22px;
+  color: #222;
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: -1px;
+  line-height: 1.15;
+}
+
+article h2 {
+  margin: 46px 0 16px;
+  padding-bottom: 7px;
+  border-bottom: 1px solid #e5e5e5;
+
+  color: #333;
+  font-size: 27px;
+  font-weight: 400;
+}
+
+article p {
+  margin: 0 0 20px;
+}
+
+article ul,
+article ol {
+  padding-left: 30px;
+}
+
+article li {
+  margin: 9px 0;
+}
+
+/* =========================
+   CODE
+   ========================= */
+
+code {
+  padding: 2px 5px;
+  color: #bf4141;
+  background: #f6f6f6;
+  border: 1px solid #e8e8e8;
+  border-radius: 3px;
+
+  font-family: Consolas, "Liberation Mono", monospace;
+  font-size: 14px;
+}
+
+pre {
+  margin: 13px 0 20px;
+  padding: 14px 17px;
+
+  overflow-x: auto;
+
+  background: var(--code-bg);
+  border: 1px solid #ddd;
+  border-left: 4px solid var(--accent);
+  border-radius: 3px;
+
+  line-height: 1.5;
+}
+
+pre code {
+  padding: 0;
+  color: #333;
+  background: transparent;
+  border: 0;
+}
+
+/* =========================
+   NOTES
+   ========================= */
+
+.note {
+  margin: 25px 0;
+  padding: 16px 20px;
+  border-left: 5px solid #4da3d4;
+  background: #eef8fd;
+  color: #466475;
+}
+
+.note.warning {
+  border-left-color: #e4aa42;
+  background: #fff8e7;
+  color: #715d38;
+}
+
+/* =========================
+   SIDEBAR
+   ========================= */
+
+aside {
+  padding-left: 27px;
+  border-left: 1px solid #e1e1e1;
+  font-size: 14px;
+}
+
+aside h4 {
+  margin: 27px 0 7px;
+
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+}
+
+aside h4:first-child {
+  margin-top: 0;
+}
+
+aside ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+aside li {
+  margin: 1px 0;
+}
+
+aside a {
+  display: block;
+  padding: 3px 0;
+  color: #777;
+}
+
+aside a:hover {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+aside li.current a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  background: var(--dark);
+  color: #999;
+}
+
+.footer {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 42px 22px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.footer p {
+  margin: 4px 0;
+}
+
+.footer strong {
+  color: white;
+}
+
+.footer a {
+  color: #bbb;
+}
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 800px) {
+
+  .header {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .main-nav {
+    gap: 15px;
+    font-size: 14px;
+  }
+
+  .search,
+  .meta {
+    display: none;
+  }
+
+  .docs {
+    display: block;
+    padding-top: 32px;
+  }
+
+  article h1 {
+    font-size: 35px;
+  }
+
+  .improve {
+    display: none;
+  }
+
+  aside {
+    margin-top: 60px;
+    padding: 30px 0 0;
+    border-left: 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .footer {
+    display: block;
+  }
+}
+</style>
+
+<header>
+<div class="header">
+
+<div class="logo">
+<strong>Jekyll</strong> Docs
+</div>
+
+<nav class="main-nav">
+#Home</a>
+#Docs</a>
+#Resources</a>
+#Showcase</a>
+#News</a>
+</nav>
+
+<div class="search">
+<input type="text" placeholder="Search the docs…">
+</div>
+
+<div class="meta">
+#v4.4</a>
+<a href="https://github.com/jekyll/jekyll">GitHub</a>
+</div>
+
+</div>
+</header>
+
+
+<div class="docs">
+
+<article>
+
+#✎ &nbsp;Improve this page</a>
+
+# Quickstart
+
+Jekyll is a static site generator. It takes text written in your favorite markup language and uses layouts to create a static website. You can customize the appearance of the site, its URLs, its content, and the way information is displayed.
+
+## Prerequisites
+
+Jekyll requires the following:
+
+- **Ruby 2.7.0** or newer
+- RubyGems
+- GCC
+- Make
+
+See the [Jekyll installation requirements](https://jekyllrb.com/docs/) for platform-specific details.
+
+## Instructions
+
+1. Install the required prerequisites for your operating system.
+
+2. Install Jekyll and Bundler:
+
+```sh
+gem install jekyll bundler
+```
+
+3. Create a new Jekyll project:
+
+```sh
+jekyll new myblog
+```
+
+4. Enter the project directory:
+
+```sh
+cd myblog
+```
+
+5. Start the Jekyll development server:
+
+```sh
+bundle exec jekyll serve
+```
+
+6. Open the local site in your browser:
+
+```text
+http://localhost:4000
+```
+
+<div class="note warning">
+
+<strong>Ruby 3 note</strong><br><br>
+
+With some configurations using Ruby 3 or newer, the development server may require WEBrick to be added explicitly.
+
+```sh
+bundle add webrick
+```
+
+</div>
+
+<div class="note">
+
+<strong>Live reload</strong><br><br>
+
+During development you can ask Jekyll to automatically trigger browser refreshes when source files change:
+
+```sh
+bundle exec jekyll serve --livereload
+```
+
+</div>
+
+If you encounter problems, first verify that the required Ruby environment and build tools are installed correctly.
+
+See the [Jekyll troubleshooting documentation](https://jekyllrb.com/docs/) for additional help.
+
+<div class="note">
+
+<strong>Platform-specific installation</strong><br><br>
+
+How Jekyll is installed depends on the operating system. Refer to the official installation guides when working with Linux, macOS or Windows.
+
+</div>
+
+</article>
+
+
+<aside>
+
+<h4>Getting Started</h4>
+
+<ul>
+<li class="current">#Quickstart</a></li>
+<li><a href="https://jekyllrb.com/docs/">Installation</a></li>
+<li><a href="https://jekyllrb.com/docs/">Ruby 101</a></li>
+<li><a href="https://jekyllrb.com/docs/">Community</a></li>
+<li><a href="https://jekyllrb.com/docs/step-by-step/01-setup/">Step by Step Tutorial</a></li>
+</ul>
+
+
+<h4>Build</h4>
+
+<ul>
+<li><a href="https://jekyllrb.com/docs/usage/">Command Line Usage</a></li>
+<li><a href="https://jekyllrb.com/docs/">Configuration</a></li>
+<li><a href="https://jekyllrb.com/docs/">Rendering Process</a></li>
+</ul>
+
+
+<h4>Content</h4>
+
+<ul>
+<li><a href="https://jekyllrb.com/docs/">Pages</a></li>
+<li><a href="https://jekyllrb.com/docs/">Posts</a></li>
+<li><a href="https://jekyllrb.com/docs/">Front Matter</a></li>
+<li><a href="https://jekyllrb.com/docs/">Collections</a></li>
+<li><a href="https://jekyllrb.com/docs/">Data Files</a></li>
+<li><a href="https://jekyllrb.com/docs/">Assets</a></li>
+<li><a href="https://jekyllrb.com/docs/">Static Files</a></li>
+</ul>
+
+
+<h4>Site Structure</h4>
+
+<ul>
+<li><a href="https://jekyllrb.com/docs/">Directory Structure</a></li>
+<li><a href="https://jekyllrb.com/docs/">Liquid</a></li>
+<li><a href="https://jekyllrb.com/docs/">Variables</a></li>
+<li><a href="https://jekyllrb.com/docs/">Includes</a></li>
+<li><a href="https://jekyllrb.com/docs/">Layouts</a></li>
+<li><a href="https://jekyllrb.com/docs/">Permalinks</a></li>
+<li><a href="https://jekyllrb.com/docs/">Themes</a></li>
+<li><a href="https://jekyllrb.com/docs/">Pagination</a></li>
+</ul>
+
+
+<h4>Guides</h4>
+
+<ul>
+<li><a href="https://jekyllrb.com/docs/">Plugins</a></li>
+<li><a href="https://jekyllrb.com/docs/">Blog Migrations</a></li>
+<li><a href="https://jekyllrb.com/docs/">Upgrading</a></li>
+<li><a href="https://jekyllrb.com/docs/">Deployment</a></li>
+</ul>
+
+</aside>
+
+</div>
+
+
+<footer>
+
+<div class="footer">
+
+<div>
+<p><strong>Jekyll documentation demo</strong></p>
+<p>A single-page Markdown recreation for experimenting with Jekyll.</p>
+</div>
+
+<div>
+<p>Static site generated with Jekyll.</p>
+<p><a href="https://github.com/jekyll/jekyll">GitHub</a></p>
+</div>
+
+</div>
+
+</footer>
